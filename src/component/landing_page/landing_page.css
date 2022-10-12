@@ -1,0 +1,27 @@
+.landing{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-left: 200px;
+}
+.image img{
+    height: 400px;
+    width: 350px;
+}
+.head{
+    padding: 40px;
+    margin: 120px 0px;
+    color: green;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button{
+    background-color: white;
+    color: green;
+    height: 30px;
+    width: 70px;
+    border: 2px solid green;
+    border-radius: 5px;
+    margin-left: 80px;
+}
