@@ -1,17 +1,16 @@
-import {Component, useEffect, useState} from "react"
+import React from 'react';
+import {useEffect, useState} from "react"
 import "./post-view.css";
 import Header from '../header/header';
+import axios from 'axios';
 const PostView = ()=> {
     const [posts, setPosts] = useState([]);
     useEffect(()=> {
-        fetch("http://localhost:3004/user").then((res)=>res.json()).then((data)=> {
-            setPosts(data);
-        }).catch((err)=> {
-            if(err) {
-                console.log(err)
-            }
-        })
-    }, []);
+        axios.get("https://project-instaclone.herokuapp.com/user").then((res)=> {
+                setPosts(res.data.profile)
+            })
+    }, [])
+console.log(posts)
     return (
         <>
         <Header/>
